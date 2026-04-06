@@ -139,8 +139,6 @@ lazio-analysis
     ├── README.md
     └── requirements.txt
 
-![Tabella confronto](images/tabella_confronto.png)
-
 ---
 
 ## Visualizzazioni
