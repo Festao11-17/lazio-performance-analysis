@@ -149,7 +149,7 @@ lazio-analysis
 
 ![Dashboard](images/dataiku_dashboard.png)
 
-![Grafici](images/dataiku_grafici.png.png)
+![Grafici](images/dataiku_grafici.png)
 
 ![Confronto tabelle](images/tabella_confronto.png)
 
