@@ -2,7 +2,7 @@
 
 ![Efficienza offensiva](images/efficienza_offensiva_media.png)
 
-Comparison of Lazio performance between the **2019/2020** and **2024/2025** Serie A seasons using football analytics metrics.
+Confronto delle prestazioni della **Lazio tra le stagioni di Serie A 2019/2020 e 2024/2025** utilizzando metriche di football analytics.
 
 ---
 
@@ -15,13 +15,13 @@ Questo progetto analizza e confronta le prestazioni della **Lazio in due stagion
 
 L'analisi considera **le prime 19 giornate di campionato (girone di andata)** per entrambe le stagioni.
 
-L’obiettivo è valutare le differenze di performance attraverso **metriche statistiche e metriche avanzate utilizzate nella football analytics**.
+L’obiettivo è valutare le differenze di performance attraverso **statistiche calcistiche e metriche avanzate utilizzate nella football analytics**.
 
 ---
 
 # Dataset
 
-I dati sono stati raccolti manualmente partita per partita e organizzati in file CSV.
+I dati sono stati raccolti manualmente partita per partita e organizzati in file **CSV**.
 
 Per ogni partita sono state registrate le seguenti informazioni.
 
@@ -49,6 +49,7 @@ Per ogni partita sono state registrate le seguenti informazioni.
 - gol nei minuti di recupero  
 
 Dataset finale generato:
+
 data/lazio_dataset_completo.csv
 
 ---
@@ -59,17 +60,17 @@ Oltre alle statistiche base sono state calcolate alcune **metriche avanzate util
 
 ## Efficienza offensiva
 
-Misura l'efficienza della squadra nel trasformare i tiri in gol.
+Misura quanto una squadra segna rispetto alla qualità delle occasioni create.
 
 Formula:
 
-efficienza_offensiva = gol_fatti / tiri
+efficienza_offensiva = gol_fatti / xG
 
 ---
 
 ## Precisione tiri
 
-Misura la percentuale di tiri che finiscono nello specchio della porta.
+Indica la percentuale di tiri che finiscono nello specchio della porta.
 
 Formula:
 
@@ -79,7 +80,7 @@ precisione_tiri = tiri_in_porta / tiri
 
 ## Conversione tiri
 
-Indica la percentuale di tiri che vengono trasformati in gol.
+Indica quanti tiri vengono trasformati in gol.
 
 Formula:
 
@@ -89,7 +90,7 @@ conversione_tiri = gol_fatti / tiri
 
 ## Overperformance xG
 
-Valuta se la squadra segna più o meno rispetto a quanto previsto dal modello Expected Goals.
+Valuta se una squadra segna **più o meno rispetto a quanto previsto dal modello xG**.
 
 Formula:
 
@@ -101,13 +102,13 @@ overperformance_xg = gol_fatti - xG
 
 Il progetto include una **pipeline di trasformazione dati sviluppata in Python**.
 
-Processo:
+Fasi della pipeline:
 
 1. Caricamento dataset stagioni  
-2. Pulizia e verifica dati  
-3. Calcolo metriche avanzate  
-4. Unione dataset  
-5. Creazione dataset finale  
+2. Pulizia e verifica dei dati  
+3. Calcolo delle metriche avanzate  
+4. Unione dei dataset  
+5. Creazione del dataset finale  
 
 Script principale:
 
@@ -118,46 +119,39 @@ pipeline/data_pipeline.py
 # Struttura del progetto
 
 lazio-analysis
-    ├── data
-    │   ├── lazio_2019_2020_andata.csv
-    │   ├── lazio_2024_2025_andata.csv
-    │   └── lazio_dataset_completo.csv
-    ├── images
-    │   ├── conversione_tiri.png
-    │   ├── efficienza_offensiva_media.png
-    │   ├── media_gol_fatti.png
-    │   ├── media_gol_subiti.png
-    │   ├── precisione_tiri.png
-    │   ├── tabella_confronto.png
-    │   └── xg_medio.png
-    ├── notebooks
-    │   ├── grafici_dataset_unito.ipynb
-    │   └── grafici.ipynb
-    ├── pipeline
-    │   ├── crea_dataset.py
-    │   └── data_pipeline.py
-    ├── README.md
-    └── requirements.txt
+│
+├── data
+│ ├── lazio_2019_2020_andata.csv
+│ ├── lazio_2024_2025_andata.csv
+│ └── lazio_dataset_completo.csv
+│
+├── images
+│ ├── conversione_tiri.png
+│ ├── dataiku_dashboard.png
+│ ├── dataiku_grafci.png
+│ ├── efficienza_offensiva_media.png
+│ ├── media_gol_fatti.png
+│ ├── media_gol_subiti.png
+│ ├── precisione_tiri.png
+│ ├── tabella_confronto.png
+│ └── xg_medio.png
+│
+├── notebooks
+│ ├── grafici_dataset_unito.ipynb
+│ └── grafici.ipynb
+│
+├── pipeline
+│ ├── crea_dataset.py
+│ └── data_pipeline.py
+│
+├── README.md
+└── requirements.txt
 
----
+![Dashboard](images/dataiku_dashboard.png)
 
-## Visualizzazioni
+![Grafici](images/dataiku_grafici.png.png)
 
-![Media gol fatti](images/media_gol_fatti.png)
-
-![Media gol subiti](images/media_gol_subiti.png)
-
-![xG medio](images/xg_medio.png)
-
-![Efficienza offensiva](images/efficienza_offensiva_media.png)
-
-![Precisione tiri](images/precisione_tiri.png)
-
-![Conversione tiri](images/conversione_tiri.png)
-
-![Tabella confronto](images/tabella_confronto.png)
-
----
+![Confronto tabelle](images/tabella_confronto.png)
 
 # Tecnologie utilizzate
 
@@ -165,12 +159,12 @@ lazio-analysis
 - Pandas  
 - Matplotlib  
 - Jupyter Notebook  
+- Dataiku  
 
 ---
 
 # Possibili sviluppi futuri
 
-Il progetto sarà essere esteso con:
+Il progetto sarà esteso concludendo con:
 
 - dashboard interattive con **Metabase**
-- pipeline dati automatizzate con **Dataiku**
