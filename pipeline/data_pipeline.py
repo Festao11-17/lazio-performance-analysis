@@ -27,14 +27,6 @@ import pandas as pd
 #    conversione_tiri = gol_fatti / tiri_in_porta
 #
 #    Indica quanto spesso i tiri in porta diventano gol.
-#
-#
-# 4) Overperformance xG
-#    Formula:
-#    overperformance_xg = gol_fatti - xG
-#
-#    Valuta se la squadra segna più o meno di quanto previsto
-#    dal modello Expected Goals.
 # ============================================================
 
 
@@ -54,9 +46,6 @@ def prepara_dataset(df):
 
     # Conversione dei tiri in porta
     df["conversione_tiri"] = df["gol_fatti"] / df["tiri_in_porta"]
-
-    # Differenza tra gol segnati e Expected Goals
-    df["overperformance_xg"] = df["gol_fatti"] - df["xG"]
 
     return df
 
