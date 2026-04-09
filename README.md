@@ -1,6 +1,6 @@
 # Lazio Performance Analysis ⚽📊
 
-![Efficienza offensiva](images/efficienza_offensiva_media.png)
+![Tabella confronto](images/tabella_confronto.png)
 
 Confronto delle prestazioni della **Lazio tra le stagioni di Serie A 2019/2020 e 2024/2025** utilizzando metriche di football analytics.
 
@@ -147,11 +147,45 @@ lazio-analysis
 ├── README.md
 └── requirements.txt
 
-![Dashboard](images/dataiku_dashboard.png)
 
-![Grafici](images/dataiku_grafici.png)
+---
 
-![Confronto tabelle](images/tabella_confronto.png)
+# Visualizzazioni
+
+![Media gol fatti](images/media_gol_fatti.png)
+
+![Media gol subiti](images/media_gol_subiti.png)
+
+![xG medio](images/xg_medio.png)
+
+![Efficienza offensiva](images/efficienza_offensiva_media.png)
+
+![Precisione tiri](images/precisione_tiri.png)
+
+![Conversione tiri](images/conversione_tiri.png)
+
+---
+
+# Pipeline Dataiku
+
+Parte del progetto è stata replicata anche utilizzando **Dataiku**, per dimostrare una **pipeline di trasformazione dati visuale**.
+
+Struttura della pipeline:
+
+Dataset → Prepare → Group → Dashboard
+
+La pipeline Dataiku esegue:
+
+- preparazione dei dati
+- calcolo delle metriche di football analytics
+- aggregazione per stagione
+- creazione di grafici di confronto
+
+Esempio di dashboard:
+
+![Dashboard Dataiku](images/dataiku_dashboard.png)
+
+---
 
 # Tecnologie utilizzate
 
