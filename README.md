@@ -17,6 +17,14 @@ L'analisi considera **le prime 19 giornate di campionato (girone di andata)** pe
 
 L’obiettivo è valutare le differenze di performance attraverso **statistiche calcistiche e metriche avanzate utilizzate nella football analytics**.
 
+# Perché queste due stagioni?
+
+La scelta è caduta su queste due stagioni perché, osservando le partite del girone di andata, le due Lazio sembravano simili nel rendimento complessivo — nonostante le rose fossero molto diverse per qualità e profilo dei giocatori.
+
+L'analisi nasce proprio da questa domanda: **i numeri confermano o smentiscono questa percezione?**
+
+I dati mostrano che l'intuizione era corretta: le due stagioni sono sorprendentemente simili in molte metriche chiave, pur con differenze significative in fase difensiva.
+
 ---
 
 # Dataset
@@ -148,6 +156,33 @@ lazio-analysis
 ![Precisione tiri](images/precisione_tiri.png)
 
 ![Conversione tiri](images/conversione_tiri.png)
+
+# Risultati
+
+Confronto delle metriche chiave nelle prime 19 giornate (girone di andata):
+
+| Metrica                  | 2019/2020 | 2024/2025 | Differenza        |
+|--------------------------|-----------|-----------|-------------------|
+| Media gol fatti          | 2.18      | 1.74      | -0.44 ↓           |
+| Media gol subiti         | 0.89      | 1.42      | +0.53 ↑           |
+| xG medio                 | 1.86      | 1.84      | -0.02 (~uguale)   |
+| Efficienza offensiva     | 1.14      | 1.01      | -0.13 ↓           |
+| Precisione tiri          | 0.40      | 0.405     | +0.005 (~uguale)  |
+| Conversione tiri         | 0.130     | 0.128     | -0.002 (~uguale)  |
+
+# Insight principali
+
+### 1. Le due squadre creano occasioni in modo quasi identico
+L'xG medio è praticamente uguale (1.86 vs 1.84): entrambe le Lazio hanno prodotto la stessa qualità di occasioni da gol per partita. Nonostante rose diverse, il sistema di gioco ha portato allo stesso volume di pericolo offensivo.
+
+### 2. La differenza vera è nella fase difensiva
+La Lazio 2019/2020 subiva in media 0.89 gol a partita; la 2024/2025 ne subisce 1.42. È l'unico dato con uno scarto significativo (+59%), e spiega perché la prima stagione viene ricordata come più solida.
+
+### 3. La Lazio 2019/2020 sfruttava meglio le occasioni
+L'efficienza offensiva (gol/xG) era 1.14 contro 1.01: la squadra di Inzaghi segnava più di quanto le occasioni create facessero prevedere, un segnale di grande concretezza sotto porta.
+
+### 4. I numeri confermano la percezione
+I dati validano l'ipotesi di partenza: le due Lazio si assomigliano molto in fase offensiva, ma si distanziano chiaramente in difesa.
 
 ---
 
